@@ -9,7 +9,7 @@
 
 * 05/10/2026 - 16h00 à 17h30
 * Prise en compte du sujet, installation de la VM debian
-* finir l'installation debian et faire l'installation des packages de l'OS
+* finir l'installation debian, faire l'installation des packages de l'OS et la connexion vers github
 * Problèmes sur l'installation de la VM sur Proxmox 
 
 ## Séance n° 2

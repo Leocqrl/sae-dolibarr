@@ -1,0 +1,9 @@
+nom;code_client;code_fournisseur;adresse;cp;ville;pays;telephone;email;client;fournisseur
+Boulangerie Dupont;CU2510-0001;;12 rue des Halles;76000;Rouen;FR;0235000001;contact@dupont-boulangerie.fr;1;0
+Garage Martin & Fils;CU2510-0002;;45 avenue de la Gare;76100;Rouen;FR;0235000002;info@garage-martin.fr;1;0
+Pharmacie du Centre;CU2510-0003;;3 place du Marché;76500;Elbeuf;FR;0235000003;pharmacie.centre@mail.fr;1;0
+Transports Bertrand;CU2510-0006;SU2510-0001;100 route de Paris;76800;Saint-Etienne-du-Rouvray;FR;0235000006;compta@bertrand-transports.fr;1;1
+Imprimerie Moreau;;SU2510-0002;5 zone industrielle Nord;76300;Sotteville-lès-Rouen;FR;0235000007;commandes@moreau-print.fr;0;1
+Papeterie Lefèvre;;SU2510-0003;17 rue de la République;76000;Rouen;FR;0235000008;vente@lefevre-papeterie.fr;0;1
+Électricité Durand;CU2510-0007;SU2510-0005;33 rue Verte;76000;Rouen;FR;0235000010;devis@durand-elec.fr;1;1
+Restaurant L'Écu;CU2510-0008;;4 rue Saint-Romain;76000;Rouen;FR;0235000011;resa@lecu.fr;1;0

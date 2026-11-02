@@ -1,0 +1,42 @@
+# Ce fichier décrit les 2 conteneurs : la base de données (db) et Dolibarr (web)
+services:
+
+  db:
+    image: mariadb:10.11             # image officielle MariaDB
+    container_name: dolibarr_db      # nom fixe, pratique pour les commandes docker exec
+    restart: unless-stopped          # redémarre tout seul après un reboot du serveur
+    environment:                     # variables lues par l'image au premier démarrage
+      MARIADB_ROOT_PASSWORD: root    # mot de passe de root
+      MARIADB_DATABASE: dolibarr     # base créée automatiquement
+      MARIADB_USER: dolibarr         # utilisateur que Dolibarr utilisera
+      MARIADB_PASSWORD: dolibarr     # son mot de passe
+    volumes:
+      - db_data:/var/lib/mysql       # stocke les données de la base en dehors du conteneur
+
+  web:
+    image: dolibarr/dolibarr:latest  # image officielle Dolibarr (Apache + PHP inclus)
+    container_name: dolibarr_web
+    restart: unless-stopped
+    depends_on:
+      - db                           # démarre db avant web
+    ports:
+      - "8080:80"                    # port 8080 de la machine -> port 80 du conteneur
+    environment:
+      DOLI_DB_HOST: db               # "db" = nom du service ci-dessus
+      DOLI_DB_NAME: dolibarr
+      DOLI_DB_USER: dolibarr
+      DOLI_DB_PASSWORD: dolibarr
+      DOLI_ADMIN_LOGIN: admin        # compte superadmin créé automatiquement
+      DOLI_ADMIN_PASSWORD: admin
+      DOLI_URL_ROOT: http://localhost:8080
+      DOLI_INSTALL_AUTO: 1           # installation automatique (pas besoin des pages web)
+      DOLI_ENABLE_MODULES: modSociete,modFournisseur  # active le module Fournisseurs et Tiers au démarrage
+    volumes:
+      - doli_docs:/var/www/documents # documents générés par Dolibarr
+
+# Volumes : espaces de stockage gérés par Docker, qui survivent à la suppression des conteneurs
+volumes:
+  db_data:
+    name: dolibarr_db_data
+  doli_docs:
+    name: dolibarr_documents

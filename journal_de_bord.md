@@ -21,8 +21,7 @@
 
 ## Séance n° 3
 
-* date - heure
-* Travail effectué
-* A faire à la prochaine séance
-* Difficultés rencontrées
-* Remarques sur la séances (membre absent, pbe technique, ...)
+* 02/11/2026 - 13h à 16h
+* Création des scripts d'automatisation de l'installation de dolibarr et de l'import des données + script de PRA
+* Modification des scripts pour une meilleure compréhension
+* RAS sur la séance.

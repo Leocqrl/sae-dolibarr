@@ -21,6 +21,13 @@
 
 ## Séance n° 3
 
+* 08/10/2026 - 13h à 16h
+* Installation de Dolibarr et test d'import de données
+* Création des scripts d'automatisation et conteneurisation de Dolibarr
+* Compréhension de la gestion des imports dans Dolibarr et installation à causé quelques soucis.
+
+## Séance n°4
+
 * 02/11/2026 - 13h à 16h
 * Création des scripts d'automatisation de l'installation de dolibarr et de l'import des données + script de PRA
 * Modification des scripts pour une meilleure compréhension

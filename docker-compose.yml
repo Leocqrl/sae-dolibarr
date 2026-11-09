@@ -39,4 +39,5 @@ volumes:
   db_data:
     name: dolibarr_db_data
   doli_docs:
+    external: true
     name: dolibarr_documents

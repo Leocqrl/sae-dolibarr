@@ -13,6 +13,6 @@ docker exec dolibarr_db mariadb-dump -uroot -proot dolibarr > $DOSSIER/dolibarr.
 
 # 2) Archive (tar) du volume des documents.
 #    On lance un petit conteneur temporaire (alpine) qui voit le volume et le dossier de sauvegarde
-docker run --rm -v dolibarr_documents:/data -v $(pwd)/$DOSSIER:/backup alpine tar czf /backup/documents.tar.gz -C /data .
+docker run --rm -v dolibarr_documents:/data -v "$(pwd)/$DOSSIER":/backup alpine tar czf /backup/documents.tar.gz -C /data .
 
 echo "Sauvegarde créée dans $DOSSIER"
